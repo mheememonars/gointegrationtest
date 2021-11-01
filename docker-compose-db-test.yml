@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  mongo_integration_test_customer:
+    container_name: mongo_integration_test_customer
+    image: mongo:4.2
+    ports:
+      - 27018:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: customer
+    volumes:
+      - ./init-mongo-test.js:/docker-entrypoint-initdb.d/init-mongo-test.js
