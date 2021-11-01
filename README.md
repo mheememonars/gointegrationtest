@@ -4,7 +4,7 @@ gointegrationtest
 How To Run
 
 ``` bash
-  $ docker-compose -f docker-compose-db-test.yml up -d
+  docker-compose -f docker-compose-db-test.yml up -d
   
-  $ go test customer/service_integration_test.go
+  go test customer/service_integration_test.go
 ```
